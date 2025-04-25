@@ -667,7 +667,7 @@ const AttendanceModuleFaculty = () => {
                   </TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#edfba6",
+                      backgroundColor: "#E5D0AC",
                       fontWeight: "bold",
                       width: "100px",
                       maxWidth: "150px",
@@ -695,7 +695,7 @@ const AttendanceModuleFaculty = () => {
                   </TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#edfba6",
+                      backgroundColor: "#E5D0AC",
                       fontWeight: "bold",
                       width: "100px",
                       maxWidth: "150px",
@@ -723,7 +723,7 @@ const AttendanceModuleFaculty = () => {
                   </TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#edfba6",
+                      backgroundColor: "#E5D0AC",
                       fontWeight: "bold",
                       width: "100px",
                       textAlign: "center",
@@ -733,7 +733,7 @@ const AttendanceModuleFaculty = () => {
                   </TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#bafac6",
+                      backgroundColor: "#F2B28C",
                       fontWeight: "bold",
                       width: "100px",
                       textAlign: "center",
@@ -756,7 +756,7 @@ const AttendanceModuleFaculty = () => {
                   <TableCell>Honorarium Time IN</TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#edfba6",
+                      backgroundColor: "#E5D0AC",
                       fontWeight: "bold",
                       width: "100px",
                       textAlign: "center",
@@ -767,7 +767,7 @@ const AttendanceModuleFaculty = () => {
                   <TableCell>Honorarium Time OUT</TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#edfba6",
+                      backgroundColor: "#E5D0AC",
                       fontWeight: "bold",
                       width: "100px",
                       textAlign: "center",
@@ -777,7 +777,7 @@ const AttendanceModuleFaculty = () => {
                   </TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#bafac6",
+                      backgroundColor: "#F2B28C",
                       fontWeight: "bold",
                       width: "100px",
                       textAlign: "center",
@@ -799,7 +799,7 @@ const AttendanceModuleFaculty = () => {
                   <TableCell>Service Credit Time IN</TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#edfba6",
+                      backgroundColor: "#E5D0AC",
                       fontWeight: "bold",
                       width: "100px",
                       textAlign: "center",
@@ -810,7 +810,7 @@ const AttendanceModuleFaculty = () => {
                   <TableCell>Service Credit Time OUT</TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#edfba6",
+                      backgroundColor: "#E5D0AC",
                       fontWeight: "bold",
                       width: "100px",
                       textAlign: "center",
@@ -820,7 +820,7 @@ const AttendanceModuleFaculty = () => {
                   </TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#bafac6",
+                      backgroundColor: "#F2B28C",
                       fontWeight: "bold",
                       width: "100px",
                       textAlign: "center",
@@ -842,7 +842,7 @@ const AttendanceModuleFaculty = () => {
                   <TableCell>Overtime Time IN</TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#edfba6",
+                      backgroundColor: "#E5D0AC",
                       fontWeight: "bold",
                       width: "100px",
                       textAlign: "center",
@@ -853,7 +853,7 @@ const AttendanceModuleFaculty = () => {
                   <TableCell>Overtime Time OUT</TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#edfba6",
+                      backgroundColor: "#E5D0AC",
                       fontWeight: "bold",
                       width: "100px",
                       textAlign: "center",
@@ -863,7 +863,7 @@ const AttendanceModuleFaculty = () => {
                   </TableCell>
                   <TableCell
                     sx={{
-                      backgroundColor: "#bafac6",
+                      backgroundColor: "#F2B28C",
                       fontWeight: "bold",
                       width: "100px",
                       textAlign: "center",
@@ -897,7 +897,7 @@ const AttendanceModuleFaculty = () => {
                     </TableCell>
                     <TableCell
                       sx={{
-                        backgroundColor: "#edfba6",
+                        backgroundColor: "#E5D0AC",
                         fontWeight: "bold",
                         width: "100px",
                         maxWidth: "150px",
@@ -913,7 +913,7 @@ const AttendanceModuleFaculty = () => {
                     <TableCell>{row.timeIN}</TableCell>
                     <TableCell
                       sx={{
-                        backgroundColor: "#edfba6",
+                        backgroundColor: "#E5D0AC",
                         fontWeight: "bold",
                         width: "120px",
                         textAlign: "center",
@@ -924,7 +924,7 @@ const AttendanceModuleFaculty = () => {
                     <TableCell>{row.timeOUT}</TableCell>
                     <TableCell
                       sx={{
-                        backgroundColor: "#edfba6",
+                        backgroundColor: "#E5D0AC",
                         fontWeight: "bold",
                         width: "120px",
                         textAlign: "center",
@@ -934,7 +934,7 @@ const AttendanceModuleFaculty = () => {
                     </TableCell>
                     <TableCell
                       sx={{
-                        backgroundColor: "#bafac6",
+                        backgroundColor: "#F2B28C",
                         fontWeight: "bold",
                         width: "100px",
                         textAlign: "center",
@@ -956,7 +956,7 @@ const AttendanceModuleFaculty = () => {
                     <TableCell>{row.officialHonorariumTimeIN === "00:00:00 AM" ? "N/A" : row.timeIN}</TableCell>
                     <TableCell
                       sx={{
-                        backgroundColor: "#edfba6",
+                        backgroundColor: "#E5D0AC",
                         fontWeight: "bold",
                         width: "100px",
                         textAlign: "center",
@@ -967,7 +967,7 @@ const AttendanceModuleFaculty = () => {
                     <TableCell>{row.officialHonorariumTimeOUT === "00:00:00 AM" ? "N/A" : row.timeOUT}</TableCell>
                     <TableCell
                       sx={{
-                        backgroundColor: "#edfba6",
+                        backgroundColor: "#E5D0AC",
                         fontWeight: "bold",
                         width: "100px",
                         textAlign: "center",
@@ -978,7 +978,7 @@ const AttendanceModuleFaculty = () => {
 
                     <TableCell
                       sx={{
-                        backgroundColor: "#bafac6",
+                        backgroundColor: "#F2B28C",
                         fontWeight: "bold",
                         width: "100px",
                         textAlign: "center",
@@ -1002,7 +1002,7 @@ const AttendanceModuleFaculty = () => {
                     <TableCell>{row.officialServiceCreditTimeIN === "00:00:00 AM" ? "N/A" : row.timeIN}</TableCell>
                     <TableCell
                       sx={{
-                        backgroundColor: "#edfba6",
+                        backgroundColor: "#E5D0AC",
                         fontWeight: "bold",
                         width: "100px",
                         textAlign: "center",
@@ -1013,7 +1013,7 @@ const AttendanceModuleFaculty = () => {
                     <TableCell>{row.officialServiceCreditTimeOUT === "00:00:00 AM" ? "N/A" : row.timeOUT}</TableCell>
                     <TableCell
                       sx={{
-                        backgroundColor: "#edfba6",
+                        backgroundColor: "#E5D0AC",
                         fontWeight: "bold",
                         width: "100px",
                         textAlign: "center",
@@ -1024,7 +1024,7 @@ const AttendanceModuleFaculty = () => {
 
                     <TableCell
                       sx={{
-                        backgroundColor: "#bafac6",
+                        backgroundColor: "#F2B28C",
                         fontWeight: "bold",
                         width: "100px",
                         textAlign: "center",
@@ -1048,7 +1048,7 @@ const AttendanceModuleFaculty = () => {
                     <TableCell>{row.officialOverTimeIN === "00:00:00 AM" ? "N/A" : row.timeIN}</TableCell>
                     <TableCell
                       sx={{
-                        backgroundColor: "#edfba6",
+                        backgroundColor: "#E5D0AC",
                         fontWeight: "bold",
                         width: "100px",
                         textAlign: "center",
@@ -1057,11 +1057,11 @@ const AttendanceModuleFaculty = () => {
                       {row.officialOverTimeIN === "00:00:00 AM" ? "N/A" : row.officialOverTimeIN}
                     </TableCell>
                     <TableCell>{row.officialOverTimeOUT === "00:00:00 AM" ? "N/A" : row.timeOUT}</TableCell>
-                    <TableCell sx={{ backgroundColor: "#edfba6", fontWeight: "bold", width: "100px", textAlign: "center" }}>{row.officialOverTimeOUT === "00:00:00 AM" ? "N/A" : row.officialOverTimeOUT}</TableCell>
+                    <TableCell sx={{ backgroundColor: "#E5D0AC", fontWeight: "bold", width: "100px", textAlign: "center" }}>{row.officialOverTimeOUT === "00:00:00 AM" ? "N/A" : row.officialOverTimeOUT}</TableCell>
 
                     <TableCell
                       sx={{
-                        backgroundColor: "#bafac6",
+                        backgroundColor: "#F2B28C",
                         fontWeight: "bold",
                         width: "100px",
                         textAlign: "center",
@@ -1093,7 +1093,7 @@ const AttendanceModuleFaculty = () => {
                     sx={{
                       fontWeight: "bold",
                       textAlign: "center",
-                      backgroundColor: "#bafac6",
+                      backgroundColor: "#F2B28C",
                     }}
                   >
                     {calculateTotalRenderedTime()}
@@ -1111,7 +1111,7 @@ const AttendanceModuleFaculty = () => {
                   <TableCell colSpan={3} sx={{ fontWeight: "bold", textAlign: "right" }}>
                     Total Rendered Time (Honorarium):
                   </TableCell>
-                  <TableCell colSpan={2} sx={{ fontWeight: "bold", textAlign: "center", backgroundColor: "#bafac6" }}>
+                  <TableCell colSpan={2} sx={{ fontWeight: "bold", textAlign: "center", backgroundColor: "#F2B28C" }}>
                     {calculateTotalRenderedTimeHN()}
                   </TableCell>
                   <TableCell
@@ -1132,7 +1132,7 @@ const AttendanceModuleFaculty = () => {
                     sx={{
                       fontWeight: "bold",
                       textAlign: "center",
-                      backgroundColor: "#bafac6",
+                      backgroundColor: "#F2B28C",
                     }}
                   >
                     {calculateTotalRenderedTimeSC()}
@@ -1156,7 +1156,7 @@ const AttendanceModuleFaculty = () => {
                     sx={{
                       fontWeight: "bold",
                       textAlign: "center",
-                      backgroundColor: "#bafac6",
+                      backgroundColor: "#F2B28C",
                     }}
                   >
                     {calculateTotalRenderedTimeOT()}
@@ -1204,7 +1204,7 @@ const AttendanceModuleFaculty = () => {
                     sx={{
                       fontWeight: "bold",
                       textAlign: "center",
-                      backgroundColor: "#bafac6",
+                      backgroundColor: "#E5D0AC",
                     }}
                   >
                     {calculateTotalRenderedTime()}
@@ -1217,7 +1217,7 @@ const AttendanceModuleFaculty = () => {
                     sx={{
                       fontWeight: "bold",
                       textAlign: "center",
-                      backgroundColor: "#ffd2d2",
+                      backgroundColor: "red",
                     }}
                   >
                     {calculateTotalRenderedTimeTardiness()}

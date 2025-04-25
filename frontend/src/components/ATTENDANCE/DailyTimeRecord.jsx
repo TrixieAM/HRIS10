@@ -145,6 +145,7 @@ const DailyTimeRecord = () => {
             height: "55px",
             marginleft: "10px",
             margintopt: "10px",
+            bgcolor: "#6D2323"
           }}
           variant="contained"
           color="primary"

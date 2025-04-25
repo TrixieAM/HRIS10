@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { TextField, Button, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
+import { Box, TextField, Button, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Container } from "@mui/material";
+import SearchIcon from '@mui/icons-material/Search';
+import SaveAsIcon from '@mui/icons-material/SaveAs';
 
 const formatTime = (time) => {
   if (!time) return "N/A";
@@ -96,13 +98,26 @@ const ViewAttendanceRecord = () => {
   };
 
   return (
-    <div style={{ padding: "16px" }}>
-       <h2>Attendance Record</h2>
-      {personName && (
-        <Typography variant="h4" gutterBottom>
-          Device Record for {personName}
-        </Typography>
-      )}
+    <Container sx={{bgcolor: "white", borderRadius: "10px"}}>
+    <div style={{ padding: "10px", marginLeft:'-10px', paddingTop:'25px' }}>
+    <Box
+          sx={{
+            backgroundColor: '#6D2323',
+            color: '#fff',
+            p: 2,
+            borderRadius: 2,
+            mb: 2,
+            
+          }}
+        >
+      <Typography variant="h5" sx={{ m: 0}}>
+            Attendance Records
+          </Typography>
+          <Typography variant="body2" sx={{ m: 0 }}>
+            Generate & review attendance records
+          </Typography>
+      </Box>
+      
       <form onSubmit={handleSubmit} style={{ marginBottom: "16px" }}>
         <TextField
           label="Enter Person ID"
@@ -156,18 +171,28 @@ const ViewAttendanceRecord = () => {
             width: "200px",
             height: "54px",
             marginLeft: "10px",
-            marginTop: "16px",
+            marginTop: "14px",
+            bgcolor: "#6D2323",
           }}
           slotProps={{
             inputLabel: {
               shrink: true,
             },
           }}
+          startIcon={<SearchIcon />}
+
         >
+          
           Search Record
         </Button>
+
       </form>
 
+      {personName && (
+        <Typography variant="h5" gutterBottom sx={{textAlign:'center', bgcolor: '#6D2323', color:'white', borderRadius:'5px', padding:'10px'}}>
+          Device Record for <b>{personName}</b>
+        </Typography>
+      )}
       {records.length > 0 && (
         <TableContainer component={Paper} style={{ marginBottom: "5%" }}>
           <Table>
@@ -196,12 +221,18 @@ const ViewAttendanceRecord = () => {
               ))}
             </TableBody>
           </Table>
-          <Button variant="contained" color="secondary" onClick={handleSaveRecords} style={{ marginTop: "16px" }}>
+          <Button variant="contained" color="secondary" onClick={handleSaveRecords} style={{ marginTop: "16px", backgroundColor: '#6D2323' }
+        
+        }
+        startIcon={<SaveAsIcon />}
+
+        >
             Save Records
           </Button>
         </TableContainer>
       )}
     </div>
+    </Container>
   );
 };
 

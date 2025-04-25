@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { TextField, Button, Grid } from "@mui/material";
+import { TextField, Button, Grid, Container, Box, Typography} from "@mui/material";
 import earistLogo from '../../assets/earistLogo.jpg';
 
 const DailyTimeRecordFaculty = () => {
@@ -78,9 +78,25 @@ const DailyTimeRecordFaculty = () => {
           }
         `}
       </style>
-
+      <Container sx={{ bgcolor: 'white', borderRadius: '10px', paddingBottom: '50px', paddingTop:'25px'}}>
       <div className="search-container no-print">
-        <h1>Faculty Record</h1>
+      <Box
+          sx={{
+            backgroundColor: '#6D2323',
+            color: '#fff',
+            p: 2,
+            borderRadius: 2,
+            mb: 2,
+            
+          }}
+        >
+      <Typography variant="h5" sx={{ m: 0}}>
+            Attendance Search
+          </Typography>
+          <Typography variant="body2" sx={{ m: 0 }}>
+            Search & review attendance records
+          </Typography>
+      </Box> 
         <div className='textfield-container'>
           <TextField
             sx={{ width: "200px", marginleft: "10px" }}
@@ -118,6 +134,7 @@ const DailyTimeRecordFaculty = () => {
               height: "55px",
               marginleft: "10px",
               margintopt: "10px",
+              bgcolor: "#6D2323"
             }}
             variant="contained"
             color="primary"
@@ -128,6 +145,8 @@ const DailyTimeRecordFaculty = () => {
           </Button>
         </div>
       </div>
+      </Container>
+      <Container sx={{bgcolor: 'white', marginTop: '20px', marginBottom: '20px', borderRadius: '10px', width: '70.6%', }}>
       <br />
       <div className="table-container" style={{marginBottom: '5%'}}>
         <div className="table-wrapper">
@@ -318,6 +337,7 @@ const DailyTimeRecordFaculty = () => {
           </div>
         </div>
       </div>
+       </Container>
 
       <Button
         sx={{
@@ -325,6 +345,7 @@ const DailyTimeRecordFaculty = () => {
           height: "55px",
           marginleft: "10px",
           margintopt: "10px",
+          bgcolor: "#6D2323"
         }}
         className="no-print"
         variant="contained"
@@ -335,6 +356,7 @@ const DailyTimeRecordFaculty = () => {
         Print
       </Button>
     </div>
+   
   );
 };
 

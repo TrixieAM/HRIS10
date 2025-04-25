@@ -384,8 +384,9 @@ router.post("/api/overall_attendance", (req, res) => {
 
 router.get("/api/overall_attendance_record", (req, res) => {
   const { personID, startDate, endDate } = req.query;
-  console.log("Received parameters:", { personID, startDate, endDate });
-  const query = "SELECT * FROM overall_attendance_record WHERE personID = ? AND startDate >= ? AND endDate <= ?";
+  console.log("Received parameters:", { personID, startDate, endDate }); // INNER JOIN person_table ON person_table.agencyEmployeeNum = overall_attendance_record.personID
+  const query = `SELECT * FROM overall_attendance_record  
+  WHERE personID = ? AND startDate >= ? AND endDate <= ?`;
 
   db.query(query, [personID, startDate, endDate], (error, results) => {
     if (error) {

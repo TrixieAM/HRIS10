@@ -36,6 +36,8 @@ const AllAttendanceRecord = () => {
   };
 
   return (
+
+    
     <Box sx={{ p: 4 }}>
       {/* Header */}
       <Typography

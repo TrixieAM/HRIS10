@@ -175,6 +175,9 @@ const submitToPayroll = async () => {
                 <b>Employee Number</b>
               </TableCell>
               <TableCell style={{ textAlign: "center" }}>
+                <b>Employee Name</b>
+              </TableCell>
+              <TableCell style={{ textAlign: "center" }}>
                 <b>Start Date</b>
               </TableCell>
               <TableCell style={{ textAlign: "center" }}>
@@ -226,6 +229,8 @@ const submitToPayroll = async () => {
               <TableRow key={index}>
                 <TableCell style={{ textAlign: "center" }}>{record.id}</TableCell>
                 <TableCell style={{ textAlign: "center" }}>{editRecord && editRecord.id === record.id ? <TextField value={editRecord.personID} onChange={(e) => setEditRecord({ ...editRecord, personID: e.target.value })} /> : record.personID}</TableCell>
+                <TableCell style={{ textAlign: "center" }}>{editRecord && editRecord.id === record.id ? <TextField value={editRecord.personID} onChange={(e) => setEditRecord({ ...editRecord, personID: e.target.value })} /> : record.firstName}</TableCell>
+
                 <TableCell>{editRecord && editRecord.id === record.id ? <TextField value={editRecord.startDate} onChange={(e) => setEditRecord({ ...editRecord, startDate: e.target.value })} /> : record.startDate}</TableCell>
                 <TableCell>{editRecord && editRecord.id === record.id ? <TextField value={editRecord.endDate} onChange={(e) => setEditRecord({ ...editRecord, endDate: e.target.value })} /> : record.endDate}</TableCell>
                 <TableCell style={{ textAlign: "center" }}>

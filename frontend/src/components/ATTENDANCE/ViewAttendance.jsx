@@ -10,7 +10,12 @@ import {
   TableHead,
   TableRow,
   Paper,
+  Container,
+  Box,
+  Typography  
 } from "@mui/material";
+import SearchIcon from '@mui/icons-material/Search';
+import SaveAsIcon from '@mui/icons-material/SaveAs';
 
 const AttendanceSearch = () => {
   const [personID, setPersonID] = useState("");
@@ -54,8 +59,25 @@ const AttendanceSearch = () => {
   };
 
   return (
+    <Container sx={{bgcolor: "white", height: "90%", paddingTop: "25px", borderRadius: "10px"}}>
     <div>
-      <h2>Attendance Search</h2>
+    <Box
+          sx={{
+            backgroundColor: '#6D2323',
+            color: '#fff',
+            p: 2,
+            borderRadius: 2,
+            mb: 2,
+            
+          }}
+        >
+      <Typography variant="h5" sx={{ m: 0}}>
+            Attendance Search
+          </Typography>
+          <Typography variant="body2" sx={{ m: 0 }}>
+            Search & review attendance records
+          </Typography>
+      </Box> 
       <TextField
         label="Person ID"
         value={personID}
@@ -88,14 +110,17 @@ const AttendanceSearch = () => {
         }}
       />
       <Button
-        sx={{ width: "200px", height: "55px", marginLeft: "10px" }}
+        sx={{ width: "200px", height: "55px", marginLeft: "10px", bgcolor: "#6D2323", marginTop:'-3px' }}
         margin="normal"
         variant="contained"
         color="primary"
         onClick={fetchRecords}
+        startIcon={<SearchIcon />}
+        
       >
         Search
       </Button>
+      
 
       {records.length > 0 && (
         <>
@@ -168,12 +193,15 @@ const AttendanceSearch = () => {
             color="secondary"
             onClick={saveAll}
             style={{ marginTop: "20px" }}
+            startIcon={<SaveAsIcon />}
+            
           >
             Save All
           </Button>
         </>
       )}
     </div>
+    </Container>
   );
 };
 

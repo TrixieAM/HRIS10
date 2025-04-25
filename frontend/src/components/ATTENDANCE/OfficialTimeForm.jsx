@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import { Typography, TextField, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
+import { Typography, TextField, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Container } from "@mui/material";
 
 const OfficialTimeForm = () => {
   const [employeeID, setemployeeID] = useState("");
@@ -187,35 +187,36 @@ const OfficialTimeForm = () => {
   };
 
   return (
+    <Container sx={{ bgcolor: 'white', paddingBottom: '25px', borderRadius: '10px'}}>
     <div>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", padding: "2rem" }}>
         {/* Left side - Title */}
-        <div style={{ textAlign: "left" }}>
+        <div style={{ textAlign: "left", marginRight: '75px' }}>
           <Typography variant="h4">Official Time Schedule</Typography>
         </div>
 
         {/* Right side - Upload Section */}
-        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <Typography variant="h6">Upload Excel File</Typography>
+        <div style={{ display: "flex", alignItems: "right", gap: "1rem" }}>
+          <Typography variant="h6" sx={{ fontSize: '13px'}}>Upload Excel File</Typography>
 
           <input type="file" accept=".xlsx,.xls" id="upload-button" style={{ display: "none" }} onChange={(e) => setFile(e.target.files[0])} />
 
           <label htmlFor="upload-button">
-            <Button variant="contained" component="span" startIcon={<CloudUploadIcon />}>
+            <Button variant="contained" sx={{ bgcolor: '#6D2323'}} component="span" startIcon={<CloudUploadIcon />}>
               Choose File
             </Button>
           </label>
 
           {file && <Typography variant="body2">{file.name}</Typography>}
 
-          <Button variant="contained" color="primary" onClick={handleUpload} disabled={!file}>
+          <Button variant="contained" color="primary" onClick={handleUpload} disabled={!file} sx={{ bgcolor: '#6D2323'}}>
             Upload Excel
           </Button>
         </div>
       </div>
       <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
         <TextField label="Employee ID" variant="outlined" size="small" value={employeeID} onChange={(e) => setemployeeID(e.target.value)} />
-        <Button variant="contained" color="primary" onClick={handleSearch}>
+        <Button variant="contained" sx={{bgcolor: '#6D2323'}} color="primary" onClick={handleSearch}>
           Search
         </Button>
       </div>
@@ -294,6 +295,7 @@ const OfficialTimeForm = () => {
         </form>
       )}
     </div>
+    </Container>
   );
 };
 
