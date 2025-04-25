@@ -68,6 +68,7 @@ import DepartmentAssignment from './components/PAYROLL/DepartmentAssignment';
 import HolidaySuspension from './components/PAYROLL/HolidaySuspension';
 import Leave from './components/PAYROLL/Leave';
 import LeaveAssignment from './components/PAYROLL/LeaveAssignment';
+import PayrollEdit from './components/PAYROLL/PayrollEdit';
 
 
 
@@ -471,6 +472,15 @@ function App() {
               element={
                 <ProtectedRoute allowedRoles={['administrator', 'superadmin']}>
                   <PayrollTable />
+                </ProtectedRoute>
+              }
+            />
+
+             <Route
+              path="/payroll-edit"
+              element={
+                <ProtectedRoute allowedRoles={['administrator', 'superadmin']}>
+                  <PayrollEdit />
                 </ProtectedRoute>
               }
             />

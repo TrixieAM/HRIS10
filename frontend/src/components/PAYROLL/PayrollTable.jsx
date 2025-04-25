@@ -116,7 +116,7 @@ const Payroll = () => {
                     <TableCell>{row.employeeNumber}</TableCell>
                     <TableCell>{row.startDate}</TableCell>
                     <TableCell>{row.endDate}</TableCell>
-                    <TableCell>{row.name}</TableCell>
+                    <TableCell>{row.lastName}, {row.firstName} {row.middleName}</TableCell>
                     <TableCell>{row.position}</TableCell>
                     <TableCell>{row.rateNbc188}</TableCell>
                     <TableCell>{row.nbc594}</TableCell>

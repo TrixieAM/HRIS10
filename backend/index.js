@@ -1425,6 +1425,10 @@ app.get("/api/payroll-with-remittance", (req, res) => {
       p.rtIns,
       p.ec,
       p.dateCreated,
+      person_table.firstName,
+      person_table.middleName,
+      person_table.lastName,
+
 
       r.nbc594,
       r.increment,
@@ -1442,6 +1446,8 @@ app.get("/api/payroll-with-remittance", (req, res) => {
       pt.position
 
     FROM payroll p
+    INNER JOIN person_table
+    ON person_table.agencyEmployeeNum =  p.employeeNumber
 
     LEFT JOIN (
       SELECT *
@@ -1518,17 +1524,78 @@ app.post("/api/add-rendered-time", async (req, res) => {
   }
 });
 
+app.put("/api/payroll-with-remittance", (req, res) => {
+  const query = `
+    SELECT
+      p.id,
+      p.employeeNumber,
+      p.startDate,
+      p.endDate,
+      p.name,
+      p.rateNbc188,
+      p.grossSalary,
+      p.abs,
+      p.h,
+      p.m,
+      p.s,
+      p.netSalary,
+      p.withholdingTax,
+      p.personalLifeRetIns,
+      p.totalGsisDeds,
+      p.totalPagibigDeds,
+      p.philhealth,
+      p.totalOtherDeds,
+      p.totalDeductions,
+      p.pay1st,
+      p.pay2nd,
+      p.rtIns,
+      p.ec,
+      p.dateCreated,
 
+      r.nbc594,
+      r.increment,
+      r.gsisSalaryLoan,
+      r.gsisPolicyLoan,
+      r.gfal,
+      r.cpl,
+      r.mpl,
+      r.mplLite,
+      r.emergencyLoan,
+      r.pagibigFundCont,
+      r.pagibig2,
+      r.multiPurpLoan,
 
+      pt.position
 
+    FROM payroll p
 
+    LEFT JOIN (
+      SELECT *
+      FROM remittance_table r1
+      WHERE NOT EXISTS (
+        SELECT 1 FROM remittance_table r2
+        WHERE r2.employeeNumber = r1.employeeNumber AND r2.id > r1.id
+      )
+    ) r ON p.employeeNumber = r.employeeNumber
 
+    LEFT JOIN (
+      SELECT *
+      FROM plantilla_table pt1
+      WHERE NOT EXISTS (
+        SELECT 1 FROM plantilla_table pt2
+        WHERE pt2.employeeNumber = pt1.employeeNumber AND pt2.id > pt1.id
+      )
+    ) pt ON p.employeeNumber = pt.employeeNumber
+  `;
 
-
-
-
-
-
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error("Error fetching joined payroll data:", err);
+      return res.status(500).json({ error: "Internal server error" });
+    }
+    res.json(results);
+  });
+});
 
 
 

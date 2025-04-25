@@ -1005,28 +1005,28 @@ const Sidebar = ({
                 <ListItem 
                   button 
                   component={Link} 
-                  to= '/payroll-editable' 
+                  to= '/payroll-edit' 
                   sx={{
-                    color: selectedItem === 'payroll-editable' ? 'white' : 'inherit',
-                    bgcolor: selectedItem === 'payroll-editable' ? '#A31D1D' : 'inherit',
+                    color: selectedItem === 'payroll-edit' ? 'white' : 'inherit',
+                    bgcolor: selectedItem === 'payroll-edit' ? '#A31D1D' : 'inherit',
                     '&:hover': {
                       bgcolor: '#f0f0f0',
                       color: 'black',
                       borderTopRightRadius: '15px',
                       borderBottomRightRadius: '15px',
                     },
-                    borderTopRightRadius: selectedItem === 'payroll-editable' ? '15px' : 0,
-                    borderBottomRightRadius: selectedItem === 'payroll-editable' ? '15px' : 0,
+                    borderTopRightRadius: selectedItem === 'payroll-edit' ? '15px' : 0,
+                    borderBottomRightRadius: selectedItem === 'payroll-edit' ? '15px' : 0,
                   }}
-                  onClick={() => handleItemClick('payroll-editable')} 
+                  onClick={() => handleItemClick('payroll-edit')} 
                   >
                   <ListItemIcon sx={{ marginRight: '-1rem',
-                     color: selectedItem === 'payroll-editable' ? 'white' : 'inherit',
+                     color: selectedItem === 'payroll-edit' ? 'white' : 'inherit',
                      '&:hover': { color: 'white' }
                    }}>
                     <PointOfSaleIcon />
                   </ListItemIcon>
-                  <ListItemText primary="Payroll Editable" sx={{ marginLeft: '-10px' }} />
+                  <ListItemText primary="Payroll Edit" sx={{ marginLeft: '-10px' }} />
                 </ListItem>
 
                 <ListItem
